@@ -1,0 +1,33 @@
+<a href ="/add">Add More Words</a>
+<a href ="/quiz">Take Another Quiz</a>
+<a href ="/">Home</a>
+<br><br>
+<table border="1">
+  <caption>Results</caption>
+  <thead>
+    <tr>
+      <th>word</th>
+      <th>asked</th>
+      <th>correct</th>
+      <th>accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(progress["length"]) %}
+    <tr>
+      <td>{{ progress["words"][i] }}</td>
+      <td>{{ progress["asked"][i] }}</td>
+      <td>{{ progress["correct"][i] }}</td>
+      <td>{{ progress["accuracy"][i] }}%</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>{{ progress["total_asked"] }}</td>
+      <td>{{ progress["total_correct"] }}</td>
+      <td>{{ progress["total_accuracy"] }}%</td>
+    </tr>
+  </tfoot>
+</table>

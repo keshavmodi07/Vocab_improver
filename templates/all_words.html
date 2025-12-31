@@ -1,0 +1,17 @@
+{% extends "home.html" %}
+{% block title %}All Words | Vocab Improver{%endblock%}
+{% block content %}
+    <h2>All Words in Your Vocabulary</h2>
+    <table>
+        <tr>
+            <th align="left">Word</th>
+            <th align="left">Meaning</th>
+        </tr>
+        {% for w, mean in zip(word,meaning) %}
+        <tr>
+            <td>{{ w }}</td>
+            <td>{{ mean }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

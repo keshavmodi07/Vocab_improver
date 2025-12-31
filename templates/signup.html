@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block title %}Sign Up | Vocab Improver{%endblock%}
+<body>
+    {% block content %}
+    <h2>Sign Up</h2>
+    <form method="post">
+        <input name="new_username" placeholder="Choose a Username" required>
+        <input type="password" name="new_password" placeholder="Choose a Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>{% if msg %}{{ msg }}{% endif %}</p>
+    {% endblock %}
+</body>
+</html>

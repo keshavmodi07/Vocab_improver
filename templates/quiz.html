@@ -1,0 +1,17 @@
+<p><b>Meaning:</b> {{ quiz_data.definition }}</p>
+<p><b>Choose the correct word:</b></p>
+<ul>
+    {% for label, option in zip(quiz_data.labels, quiz_data.options) %}
+        <li>{{ label }}. {{ option }}</li>
+    {% endfor %}
+</ul>
+
+
+<form method="post" action="/answer">
+    <input type="hidden" name="word_id" value="{{ quiz_data.word_id }}">
+    <input type="hidden" name="correct" value="{{ quiz_data.correct_label }}">
+    <input name="answer" placeholder="Your answer">
+        <button>Submit</button>
+    <input type="submit" name="results" value="Finish and See Results">
+
+</form>

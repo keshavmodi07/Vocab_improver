@@ -1,0 +1,23 @@
+{% block title %}Vocab Improver{%endblock%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <a href ="/add">Add More Words</a>
+    <a href ="/quiz">Take a Quiz</a>
+    <a href ="/login">Login</a>
+    <a href ="/signup">Sign Up</a>  
+    <a href="/">Home</a>
+    <a href="/all_words">All Words</a>
+</head>
+<body>
+    {% block content %}
+    <h1>Welcome to Vocab Improver!</h1>
+    <p>Enhance your vocabulary by adding new words and taking quizzes.</p>
+    {% endblock %}
+</body>
+
+</html>
